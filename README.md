@@ -14,9 +14,13 @@ cp .env.example .env
 ```
 
 3. Build Docker containers:
+
 ```bash
+make build
+```
 
 4. Run containers:
+
 ```bash
 make up
 ```
