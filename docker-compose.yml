@@ -1,0 +1,27 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: loan-system-app
+        volumes:
+            - .:/var/www
+        networks:
+            - loan-network
+
+    nginx:
+        image: nginx:1.25-alpine
+        container_name: loan-system-nginx
+        ports:
+            - "8080:80"
+        volumes:
+            - .:/var/www
+            - ./docker/nginx/conf.d:/etc/nginx/conf.d
+        depends_on:
+            - app
+        networks:
+            - loan-network
+
+networks:
+    loan-network:
+        driver: bridge

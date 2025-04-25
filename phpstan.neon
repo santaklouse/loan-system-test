@@ -1,0 +1,11 @@
+parameters:
+    level: 8
+    paths:
+        - app
+    excludePaths:
+        - vendor/*
+        - storage/*
+        - bootstrap/*
+    ignoreErrors:
+        -
+            identifier: missingType.iterableValue
