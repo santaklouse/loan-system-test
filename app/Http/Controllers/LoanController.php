@@ -53,11 +53,12 @@ class LoanController extends Controller
             'id' => $loanDTO->id,
             'name' => $loanDTO->name,
             'approved' => $loanDTO->isApproved,
+            'rate' => $loanDTO->rate,
             'client_id' => $loanDTO->clientId,
             'message' => 'Loan processed successfully',
         ];
 
-        if ($response['approved'] === FALSE) {
+        if ($response['approved'] === false) {
             $response['errors'] = $errors;
         }
 

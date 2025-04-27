@@ -20,7 +20,7 @@ return [
         [
             'name' => 'Jan Novak',
             'age' => 45,
-            'region' => 'BR',
+            'region' => 'OS',
             'income' => 2000,
             'score' => 700,
             'pin' => '234-56-7890',
@@ -30,9 +30,9 @@ return [
         [
             'name' => 'Alena Svobodova',
             'age' => 28,
-            'region' => 'OS',
-            'income' => 1200,
-            'score' => 550,
+            'region' => 'BR',
+            'income' => 700,
+            'score' => 70,
             'pin' => '345-67-8901',
             'email' => 'alena.svobodova@example.com',
             'phone' => '+420345678901',

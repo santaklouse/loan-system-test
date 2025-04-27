@@ -58,7 +58,7 @@ class LoanControllerTest extends TestCase
     public function testCheckLoanEligibilityReturnsCorrectResponse(): void
     {
         $mockHandler = $this->createMock(CheckLoanEligibilityHandler::class);
-        $mockHandler->method('handle')->willReturn(new CreditCheckResult($this->loan,TRUE));
+        $mockHandler->method('handle')->willReturn(new CreditCheckResult($this->loan, true));
 
         $this->app->instance(CheckLoanEligibilityHandler::class, $mockHandler);
 

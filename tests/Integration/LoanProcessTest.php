@@ -47,6 +47,8 @@ class LoanProcessTest extends TestCase
 
         // 2. check loan eligibility
         $response = $this->postJson('/api/loans/check', [
+            // we use In-Memmory repository, so we need to decrement the clientId
+            // in order to get the correct clientId
             'client_id' => --$clientId,
             'loan_name' => 'Test Loan',
             'amount' => 1000,

@@ -34,7 +34,7 @@ class InMemoryClientRepository implements ClientRepositoryInterface
 
     public function findById(ClientId $id): ?Client
     {
-        return $this->clients[$id->getValue()] ?? NULL;
+        return $this->clients[$id->getValue()] ?? null;
     }
 
     public function save(Client $client): void
