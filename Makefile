@@ -8,6 +8,11 @@ build: ## Build containers
 
 up: ## Run containers
 	docker-compose up -d
+	docker-compose exec app composer install --no-interaction --optimize-autoloader --no-dev
+	docker-compose exec app chmod -R 777 ./storage
+	docker-compose exec app php artisan key:generate
+	docker-compose exec app chown -R www-data:www-data /var/www
+	docker-compose exec app php artisan migrate --force --no-interaction
 
 down: ## Stop containers
 	docker-compose down

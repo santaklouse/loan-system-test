@@ -4,8 +4,6 @@ services:
             context: .
             dockerfile: Dockerfile
         container_name: loan-system-app
-        volumes:
-            - .:/var/www
         networks:
             - loan-network
 

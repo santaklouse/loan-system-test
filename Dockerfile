@@ -20,7 +20,6 @@ COPY . /var/www
 RUN chown -R www-data:www-data /var/www
 
 RUN composer install --no-interaction --optimize-autoloader --no-dev
-RUN php artisan key:generate
 
 EXPOSE 9000
 
